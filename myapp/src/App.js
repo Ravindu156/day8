@@ -7,7 +7,16 @@ import AboutUs from './components/AboutUs';
 function App() {
   return (
     <div className="App">
+     
       <Router>
+      <nav>
+      <ul>
+          <li><Link to="/home">Home</Link></li>
+          <li><Link to="/about">About Us</Link></li>
+          <li><Link to="/contact">Contact Us</Link></li>
+
+      </ul>
+      </nav>
         <Routes>
             <Route path='/home' element={<Home/>}></Route>
             <Route path='/about' element={<AboutUs/>}></Route>
@@ -15,6 +24,7 @@ function App() {
           </Routes>  
         
        </Router>  
+  
     </div>
   );
 }
