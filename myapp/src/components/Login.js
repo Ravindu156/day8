@@ -3,7 +3,11 @@ import { useState } from "react";
 export default function Login(){
     const navigate=useNavigate();
    
-    
+    const getUser=(e)=>{
+        const [name,value]=e.target;
+        setUser(e.target.value);
+
+    }
 
     const authenticate=()=>{
         if(user===username && pass===password){
