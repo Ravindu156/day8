@@ -5,7 +5,7 @@ export default function Login(){
    
     const getUser=(e)=>{
         const [name,value]=e.target;
-        setUser(e.target.value);
+        setUser(value);
 
     }
 
