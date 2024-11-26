@@ -3,6 +3,8 @@ import {BrowserRouter as Router,Routes,Route,Link,NavLink} from 'react-router-do
 import ContactUs from './components/ContactUs';
 import Home from './components/Home';
 import AboutUs from './components/AboutUs';
+import Login from './components/Login';
+import Dashboard from './components/Dashboard'; 
 
 function App() {
   return (
@@ -27,8 +29,17 @@ function App() {
 
 
        <Router>
+        <nav>
+          <ul>
+
+          </ul>
+
+        </nav>
+
+
            <Routes>
-              <Route path='/login' element={<Login/>}></Route>
+              <Route path='/' element={<Login/>}></Route>
+              <Route path='/dash' element={<Dashboard/>}></Route>
            </Routes>
 
 
