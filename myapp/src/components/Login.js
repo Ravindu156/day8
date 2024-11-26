@@ -4,7 +4,7 @@ export default function Login(){
     const navigate=useNavigate();
    
     
-    
+
     const authenticate=()=>{
         if(user===username && pass===password){
             navigate('/dash');
@@ -15,12 +15,7 @@ export default function Login(){
 
     }
 
-    const [user,setUser]=useState({
-        username:''
-    });  
-    const [pass,setPass]=useState({
-        password:''
-    });
+ 
 
     const username='admin';
     const password='admin';
@@ -29,9 +24,9 @@ export default function Login(){
         <div>
             <h1>Login Here</h1>
             <p>Username:</p>
-            <input type="text" value={setUser} name="usrname" id="usrname"></input>
+            <input type="text"  name="usrname" id="usrname"></input>
             <p>Password</p>
-            <input type="password" value={setPass} name='pass1' id="pass1"></input>
+            <input type="password"  name='pass1' id="pass1"></input>
             <br></br>
             <button onClick={authenticate}>Login</button>
         </div>
