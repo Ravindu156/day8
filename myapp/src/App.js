@@ -1,52 +1,33 @@
 import './App.css';
-import {BrowserRouter as Router,Routes,Route,Link,NavLink} from 'react-router-dom';
-import ContactUs from './components/ContactUs';
+import { BrowserRouter as Router, Routes, Route, Link,NavLink } from 'react-router-dom';
+import Login from './components/Login';
+import Dasboard from './components/Dashboard';
 import Home from './components/Home';
 import AboutUs from './components/AboutUs';
-import Login from './components/Login';
-import Dashboard from './components/Dashboard'; 
+import ContactUs from './components/ContactUs';
 
 function App() {
-  return (
-    <div className="App">
-     
-     { /*<Router>
-      <nav>
-      <ul>
-          <li><Link to="/home">Home</Link></li>
-          <li><Link to="/about">About Us</Link></li>
-          <li><Link to="/contact">Contact Us</Link></li>
-
-      </ul>
+  return (  
+   
+    <Router>
+    <nav>
+        <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
+          <li><Link to="/login">Login</Link></li>
+        </ul>
       </nav>
+
+    
         <Routes>
-            <Route path='/home' element={<Home/>}></Route>
-            <Route path='/about' element={<AboutUs/>}></Route>
-            <Route path='/contact' element={<ContactUs/>}></Route>
-          </Routes>  
-        
-       </Router> */}
-
-
-       <Router>
-        <nav>
-          <ul>
-
-          </ul>
-
-        </nav>
-
-
-           <Routes>
-              <Route path='/' element={<Login/>}></Route>
-              <Route path='/dash' element={<Dashboard/>}></Route>
-           </Routes>
-
-
-
-       </Router>
-  
-    </div>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/login' element={<Login/>}/>
+          <Route path='/dash' element={<Dasboard/>}/>
+          <Route path='/about' element={<AboutUs/>}/>
+          <Route path='/contact' element={<ContactUs/>}/>
+        </Routes>
+      </Router>
   );
 }
 
