@@ -1,40 +1,48 @@
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import {usestate} from "react";
+import {useNavigate} from "react-router-dom";
+
 export default function Login(){
-    const navigate=useNavigate();
-   
-    const getUser=(e)=>{
-        const [name,value]=e.target;
-        setUser(value);
+ const navigate =useNavigate();
 
-    }
-
-    const authenticate=()=>{
-        if(user===username && pass===password){
-            navigate('/dash');
-        }
-        else{
-            alert('Invalid Credentials');
-        }
-
-    }
-
- 
-
-    const username='admin';
-    const password='admin';
-
-    return(
-        <div>
-            <h1>Login Here</h1>
-            <p>Username:</p>
-            <input type="text"  name="usrname" id="usrname"></input>
-            <p>Password</p>
-            <input type="password"  name='pass1' id="pass1"></input>
-            <br></br>
-            <button onClick={authenticate}>Login</button>
-        </div>
+return(
+    <div>
+        <h1>Login Here</h1>
+        <table>
+            <tr>
+                <td>Username:</td>
+                <td><input type="text" name="username" onChange={getTextInput}/></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" name="pwd" onChange={getTextInput}/></td>
+            </tr>
+            <tr>
+                <td style={{color:'red'}} colSpan={2}>{user.error}</td>
+            </tr>
 
 
-    );
+        </table>
+        <button onClick={authenticate}>Login</button>
+
+
+
+
+    </div>
+
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
